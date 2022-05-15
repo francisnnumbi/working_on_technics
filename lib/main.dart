@@ -8,6 +8,7 @@ import 'package:working_on_technics/modules/module4/any_widget.dart';
 import 'package:working_on_technics/modules/module4/base_widget.dart';
 import 'package:working_on_technics/modules/module5/module5_screen.dart';
 import 'package:working_on_technics/modules/module7/module7_screen.dart';
+import 'package:working_on_technics/modules/module8/module8_screen.dart';
 
 import 'modules/module1/pull_to_refresh.dart';
 import 'modules/module3/module3_screen.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
       // home: const TestScreen(),
       //home: Module3Screen(),
       // home: BaseWidget(data: "Crazy", child: AnyWidget()),
-      home: Module7Screen(),
+      home: Module8Screen(),
     );
   }
 }

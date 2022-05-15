@@ -87,129 +87,132 @@ class Module6Screen extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: buildDashboardBlock1(children: [
-                        buildDashboardElementCategory1(
-                            icon: Icons.person_outline,
-                            title: '10K',
-                            subtitle: 'Visitors'),
-                        buildDashboardElementCategory1(
-                            icon: Icons.volume_down,
-                            iconColor: Colors.green,
-                            title: '100%',
-                            subtitle: 'Volume'),
-                        buildDashboardElementCategory1(
-                            icon: Icons.file_present,
-                            iconColor: Colors.red,
-                            title: '2000+',
-                            subtitle: 'Files'),
-                        buildDashboardElementCategory1(
-                            icon: Icons.mail_outline,
-                            title: '120',
-                            subtitle: 'Mails'),
-                      ]),
-                    ),
-                    const SizedBox(width: 20),
-                    Expanded(
-                      child: buildDashboardBlock1(children: [
-                        buildDashboardElementCategory1(
-                            icon: Icons.share,
-                            title: '1000',
-                            subtitle: 'Shares'),
-                        buildDashboardElementCategory1(
-                            icon: Icons.alt_route,
-                            iconColor: Colors.green,
-                            title: '600',
-                            subtitle: 'Network'),
-                        buildDashboardElementCategory1(
-                            icon: Icons.signal_cellular_alt,
-                            iconColor: Colors.red,
-                            title: '350',
-                            subtitle: 'Returns'),
-                        buildDashboardElementCategory1(
-                            icon: Icons.wifi,
-                            title: '100%',
-                            subtitle: 'Connections'),
-                      ]),
-                    ),
-                    const SizedBox(width: 20),
-                    Expanded(
-                        child: Column(
-                      children: [
-                        Card(
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Center(
-                                child: Container(
-                                    color: Colors.green,
+                child: AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: buildDashboardBlock1(children: [
+                          buildDashboardElementCategory1(
+                              icon: Icons.person_outline,
+                              title: '10K',
+                              subtitle: 'Visitors'),
+                          buildDashboardElementCategory1(
+                              icon: Icons.volume_down,
+                              iconColor: Colors.green,
+                              title: '100%',
+                              subtitle: 'Volume'),
+                          buildDashboardElementCategory1(
+                              icon: Icons.file_present,
+                              iconColor: Colors.red,
+                              title: '2000+',
+                              subtitle: 'Files'),
+                          buildDashboardElementCategory1(
+                              icon: Icons.mail_outline,
+                              title: '120',
+                              subtitle: 'Mails'),
+                        ]),
+                      ),
+                      const SizedBox(width: 20),
+                      Expanded(
+                        child: buildDashboardBlock1(children: [
+                          buildDashboardElementCategory1(
+                              icon: Icons.share,
+                              title: '1000',
+                              subtitle: 'Shares'),
+                          buildDashboardElementCategory1(
+                              icon: Icons.alt_route,
+                              iconColor: Colors.green,
+                              title: '600',
+                              subtitle: 'Network'),
+                          buildDashboardElementCategory1(
+                              icon: Icons.signal_cellular_alt,
+                              iconColor: Colors.red,
+                              title: '350',
+                              subtitle: 'Returns'),
+                          buildDashboardElementCategory1(
+                              icon: Icons.wifi,
+                              title: '100%',
+                              subtitle: 'Connections'),
+                        ]),
+                      ),
+                      const SizedBox(width: 20),
+                      Expanded(
+                          child: Column(
+                        children: [
+                          Card(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Center(
+                                  child: Container(
+                                      color: Colors.green,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20, vertical: 10),
+                                      child: const Center(
+                                        child: Icon(Icons.star,
+                                            color: Colors.white),
+                                      )),
+                                ),
+                                Expanded(
+                                  child: FittedBox(
+                                    child: Container(
+                                        color: Colors.green[200],
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 20, vertical: 10),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: const [
+                                            Text('4000+',
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                            Text('Ratings Received',
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                          ],
+                                        )),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Card(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                    color: Colors.blue,
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 20, vertical: 10),
-                                    child: const Center(
-                                      child:
-                                          Icon(Icons.star, color: Colors.white),
-                                    )),
-                              ),
-                              Expanded(
-                                child: FittedBox(
+                                    child: const Icon(Icons.wine_bar_outlined,
+                                        color: Colors.white)),
+                                Expanded(
                                   child: Container(
-                                      color: Colors.green[200],
+                                      color: Colors.blue[200],
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 20, vertical: 10),
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: const [
-                                          Text('4000+',
+                                          Text('17',
                                               style: TextStyle(
                                                   color: Colors.white)),
-                                          Text('Ratings Received',
+                                          Text('Achievements',
                                               style: TextStyle(
                                                   color: Colors.white)),
                                         ],
                                       )),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 20),
-                        Card(
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                  color: Colors.blue,
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 20, vertical: 10),
-                                  child: const Icon(Icons.wine_bar_outlined,
-                                      color: Colors.white)),
-                              Expanded(
-                                child: Container(
-                                    color: Colors.blue[200],
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 20, vertical: 10),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: const [
-                                        Text('17',
-                                            style:
-                                                TextStyle(color: Colors.white)),
-                                        Text('Achievements',
-                                            style:
-                                                TextStyle(color: Colors.white)),
-                                      ],
-                                    )),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    )),
-                  ],
+                        ],
+                      )),
+                    ],
+                  ),
                 ),
               ),
             ],
