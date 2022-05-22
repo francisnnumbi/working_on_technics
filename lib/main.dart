@@ -3,12 +3,14 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:working_on_technics/modules/module10/callback_tuto.dart';
 import 'package:working_on_technics/modules/module2/module2_screen.dart';
 import 'package:working_on_technics/modules/module4/any_widget.dart';
 import 'package:working_on_technics/modules/module4/base_widget.dart';
 import 'package:working_on_technics/modules/module5/module5_screen.dart';
 import 'package:working_on_technics/modules/module7/module7_screen.dart';
 import 'package:working_on_technics/modules/module8/module8_screen.dart';
+import 'package:working_on_technics/modules/module9/window_with_menu_screen.dart';
 
 import 'modules/module1/pull_to_refresh.dart';
 import 'modules/module3/module3_screen.dart';
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
       // home: const TestScreen(),
       //home: Module3Screen(),
       // home: BaseWidget(data: "Crazy", child: AnyWidget()),
-      home: Module8Screen(),
+      home: CallbackTuto(),
     );
   }
 }
