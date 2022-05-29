@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:working_on_technics/modules/module10/callback_tuto.dart';
+import 'package:working_on_technics/modules/module11/pdf_receipt_generator.dart';
 import 'package:working_on_technics/modules/module2/module2_screen.dart';
 import 'package:working_on_technics/modules/module4/any_widget.dart';
 import 'package:working_on_technics/modules/module4/base_widget.dart';
@@ -13,16 +14,18 @@ import 'package:working_on_technics/modules/module8/module8_screen.dart';
 import 'package:working_on_technics/modules/module9/window_with_menu_screen.dart';
 
 import 'modules/module1/pull_to_refresh.dart';
+import 'modules/module11/pdf_controller.dart';
 import 'modules/module3/module3_screen.dart';
 import 'modules/module6/module6_screen.dart';
 
 void main() async {
   await GetStorage.init();
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+  final PdfController pc = Get.put(PdfController());
 
   // This widget is the root of your application.
   @override
@@ -31,12 +34,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepOrange,
       ),
       // home: const TestScreen(),
       //home: Module3Screen(),
       // home: BaseWidget(data: "Crazy", child: AnyWidget()),
-      home: CallbackTuto(),
+      home: PdfReceiptGenerator(),
     );
   }
 }

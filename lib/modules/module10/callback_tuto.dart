@@ -40,7 +40,7 @@ class _CallbackTutoState extends State<CallbackTuto> {
             FunctionCaller(
               onButtonPressed: (val) {
                 setState(() {
-                  text = "$val";
+                  text = val;
                 });
               },
             ),
@@ -50,7 +50,7 @@ class _CallbackTutoState extends State<CallbackTuto> {
               child: ValueChangedCaller(
                 onButtonPressed: (val) {
                   setState(() {
-                    text = "$val";
+                    text = val;
                   });
                 },
               ),
