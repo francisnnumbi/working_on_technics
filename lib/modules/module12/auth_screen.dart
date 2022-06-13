@@ -1,16 +1,14 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_auth/my_auth.dart';
 
-class AuthScreen extends StatefulWidget {
-  const AuthScreen({Key? key}) : super(key: key);
+class AuthScreen extends StatelessWidget {
+  AuthScreen({Key? key}) : super(key: key);
 
-  @override
-  State<AuthScreen> createState() => _AuthScreenState();
-}
-
-class _AuthScreenState extends State<AuthScreen> {
   var authMap = <String, dynamic>{}.obs;
+  var notification = "".obs;
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +16,19 @@ class _AuthScreenState extends State<AuthScreen> {
       appBar: AppBar(
         title: const Text('Auth Screen'),
       ),
-      body: Column(
+      body: ListView(
         children: [
           Login(
+            input1: "phone",
+            obscureText: true,
             onAuthenticated: (Map<String, dynamic> map) {
               authMap.value = map;
+            },
+            onRegisterButtonPressed: () {
+              notification.value = 'onRegisterButtonPressed';
+            },
+            onPasswordForgotButtonPressed: () {
+              notification.value = 'onPasswordForgotButtonPressed';
             },
           ),
           const SizedBox(
@@ -32,7 +38,7 @@ class _AuthScreenState extends State<AuthScreen> {
             padding: const EdgeInsets.all(8.0),
             child: Obx(() {
               return Text(
-                "Email: ${authMap.value['email']}",
+                "Phone : ${authMap.value['phone']}",
               );
             }),
           ),
@@ -40,7 +46,15 @@ class _AuthScreenState extends State<AuthScreen> {
             padding: const EdgeInsets.all(8.0),
             child: Obx(() {
               return Text(
-                "Password: ${authMap.value['password']}",
+                "Password : ${authMap.value['password']}",
+              );
+            }),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Obx(() {
+              return Text(
+                "NOTIFICATION : ${notification.value}",
               );
             }),
           ),
