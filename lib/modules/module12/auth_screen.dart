@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:my_auth/my_auth.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -9,7 +10,7 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
-  String info = "Hey, tu peux t'authentifier ici";
+  var authMap = <String, dynamic>{}.obs;
 
   @override
   Widget build(BuildContext context) {
@@ -21,16 +22,28 @@ class _AuthScreenState extends State<AuthScreen> {
         children: [
           Login(
             onAuthenticated: (Map<String, dynamic> map) {
-              setState(() {
-                info =
-                    "Authentifié avec email: ${map['email']}, password: ${map['password']}";
-              });
+              authMap.value = map;
             },
           ),
           const SizedBox(
             height: 20,
           ),
-          Text(info),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Obx(() {
+              return Text(
+                "Email: ${authMap.value['email']}",
+              );
+            }),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Obx(() {
+              return Text(
+                "Password: ${authMap.value['password']}",
+              );
+            }),
+          ),
         ],
       ),
     );
