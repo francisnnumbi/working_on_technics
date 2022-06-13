@@ -29,6 +29,9 @@ dependencies:
   open_file: ^3.2.1
   #advance_pdf_viewer: ^2.0.1
 
+  my_auth:
+    path: packages/my_auth
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
