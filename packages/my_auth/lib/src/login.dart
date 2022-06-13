@@ -2,8 +2,8 @@ library my_auth;
 
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
-  Login({
+class LoginView extends StatelessWidget {
+  LoginView({
     Key? key,
     this.input1 = "email",
     this.input2 = "password",
@@ -13,7 +13,7 @@ class Login extends StatelessWidget {
     this.forgotPasswordButtonText = "Mot de passe oublié",
     required this.onAuthenticated,
     this.onRegisterButtonPressed,
-    this.onPasswordForgotButtonPressed,
+    this.onForgotPasswordButtonPressed,
   }) : super(key: key);
   final String loginButtonText;
   final String registerButtonText;
@@ -30,7 +30,7 @@ class Login extends StatelessWidget {
    */
   final ValueChanged<Map<String, dynamic>> onAuthenticated;
   final VoidCallback? onRegisterButtonPressed;
-  final VoidCallback? onPasswordForgotButtonPressed;
+  final VoidCallback? onForgotPasswordButtonPressed;
 
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -49,6 +49,9 @@ class Login extends StatelessWidget {
                   decoration: InputDecoration(
                     labelText: input1,
                   ),
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
                 TextFormField(
                   controller: passwordController,
@@ -77,18 +80,19 @@ class Login extends StatelessWidget {
                     onPressed: onRegisterButtonPressed,
                     child: Text(registerButtonText),
                   ),
-                if (onRegisterButtonPressed != null)
+                if (onRegisterButtonPressed != null &&
+                    onForgotPasswordButtonPressed != null)
                   const SizedBox(
                     height: 10,
                   ),
-                if (onPasswordForgotButtonPressed != null)
+                if (onForgotPasswordButtonPressed != null)
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       style: TextButton.styleFrom(
                         primary: Theme.of(context).unselectedWidgetColor,
                       ),
-                      onPressed: onPasswordForgotButtonPressed,
+                      onPressed: onForgotPasswordButtonPressed,
                       child: Text(forgotPasswordButtonText),
                     ),
                   ),

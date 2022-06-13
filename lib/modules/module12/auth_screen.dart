@@ -14,11 +14,11 @@ class AuthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Auth Screen'),
+        title: const Text('Login Screen'),
       ),
       body: ListView(
         children: [
-          Login(
+          LoginView(
             input1: "phone",
             obscureText: true,
             onAuthenticated: (Map<String, dynamic> map) {
@@ -27,8 +27,8 @@ class AuthScreen extends StatelessWidget {
             onRegisterButtonPressed: () {
               notification.value = 'onRegisterButtonPressed';
             },
-            onPasswordForgotButtonPressed: () {
-              notification.value = 'onPasswordForgotButtonPressed';
+            onForgotPasswordButtonPressed: () {
+              notification.value = 'onForgotPasswordButtonPressed';
             },
           ),
           const SizedBox(
