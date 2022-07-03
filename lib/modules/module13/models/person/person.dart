@@ -1,4 +1,4 @@
-import 'package:hive_flutter/adapters.dart';
+import 'package:hive/hive.dart';
 import 'package:working_on_technics/modules/module13/models/address/address.dart';
 
 @HiveType(typeId: 1)

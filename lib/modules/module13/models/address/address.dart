@@ -1,4 +1,4 @@
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive/hive.dart';
 
 @HiveType(typeId: 0)
 class Address extends HiveObject {
