@@ -6,7 +6,7 @@ class Drifting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 247, 178, 100),
+      backgroundColor:const Color.fromARGB(255, 253, 235, 215),
       appBar: AppBar(title: const Text('Drifting')),
     );
   }
