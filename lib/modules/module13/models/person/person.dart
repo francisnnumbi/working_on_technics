@@ -4,5 +4,5 @@ class Person {
   late String name;
   late List<Address> addresses;
 
-  Person({required this.name, required this.addresses})
+  Person({required this.name, required this.addresses});
 }
